@@ -37,18 +37,14 @@ class TipCalculator extends StatelessWidget implements CalculatorViews {
             num2 = 0.0;
           }
         });
-    calcPresenter=new CalcPresenter(num1, num2, this);
 
     // Create button
     RaisedButton plusButton = new RaisedButton(
         child: new Text("Summation"),
         onPressed: () {
-          calcPresenter.plus();
-          /*AlertDialog dialog = new AlertDialog(
-              content: new Text("Total: \$$result"));
+          calcPresenter=new CalcPresenter(num1, num2, this,context);
 
-          // Show dialog
-          showDialog(context: context, child: dialog);*/
+          calcPresenter.plus();
         });
 
     Container container = new Container(
@@ -63,7 +59,13 @@ class TipCalculator extends StatelessWidget implements CalculatorViews {
   }
 
   @override
-  void showResult(double result) {
-    // TODO: implement showResult
+  void showResult(double result,BuildContext context) {
+
+    AlertDialog dialog = new AlertDialog(
+              content: new Text("Total: \$$result"));
+          // Show dialog
+          showDialog(context: context, child: dialog);
+
+
   }
 }
