@@ -45,9 +45,18 @@ class TipCalculator extends StatelessWidget implements CalculatorViews {
           child: new Text("Summation"),
 
         onPressed: () {
-          calcPresenter = new CalcPresenter(num1, num2, this, context);
+          calcPresenter = new CalcPresenter(num1,num2, this, context);
           calcPresenter.plus();
         }
+        ));
+    Container SubBtn=   new Container(
+        margin: const EdgeInsets.only(top: 60.0),
+        child:new RaisedButton(
+            child: new Text("Subtraction"),
+            onPressed: () {
+              calcPresenter = new CalcPresenter(num1, num2, this, context);
+              calcPresenter.minus();
+            }
         ));
 
 
@@ -55,7 +64,7 @@ class TipCalculator extends StatelessWidget implements CalculatorViews {
 
     Container container = new Container(
         padding: const EdgeInsets.all(16.0),
-        child: new Column(children: [num1One, num1Tow, SummationBtn]));
+        child: new Column(children: [num1One, num1Tow, SummationBtn,SubBtn]));
 
     AppBar appBar = new AppBar(title: new Text("Calculator"));
 
@@ -65,7 +74,7 @@ class TipCalculator extends StatelessWidget implements CalculatorViews {
 
   @override
   void showResult(double result, BuildContext context) {
-    AlertDialog dialog = new AlertDialog(content: new Text("Total: \$$result"));
+    AlertDialog dialog = new AlertDialog(content: new Text("Result is : $result"));
     // Show dialog
     showDialog(context: context, child: dialog);
     calcPresenter.ResetResult();
