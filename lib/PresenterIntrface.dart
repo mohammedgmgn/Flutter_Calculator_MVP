@@ -5,5 +5,6 @@ class PresnterIntrface{
   void Divition(){}
   void Multiplication(){}
 
+  void ResetResult(){}
 
 }
