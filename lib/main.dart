@@ -61,20 +61,27 @@ class TipCalculator extends StatelessWidget implements CalculatorViews {
     Container MultiBtn=   new Container(
         margin: const EdgeInsets.only(top: 60.0),
         child:new RaisedButton(
-            child: new Text("Subtraction"),
+            child: new Text("Multiplication"),
             onPressed: () {
               calcPresenter = new CalcPresenter(num1, num2, this, context);
               calcPresenter.Multiplication();
             }
         ));
-
-
+    Container DivsionBtn=   new Container(
+        margin: const EdgeInsets.only(top: 60.0),
+        child:new RaisedButton(
+            child: new Text("Division"),
+            onPressed: () {
+              calcPresenter = new CalcPresenter(num1, num2, this, context);
+              calcPresenter.Divition();
+            }
+        ));
 
 
 
     Container container = new Container(
         padding: const EdgeInsets.all(16.0),
-        child: new Column(children: [num1One, num1Tow, SummationBtn,SubBtn,MultiBtn]));
+        child: new Column(children: [num1One, num1Tow, SummationBtn,SubBtn,MultiBtn,DivsionBtn]));
 
     AppBar appBar = new AppBar(title: new Text("Calculator"));
 

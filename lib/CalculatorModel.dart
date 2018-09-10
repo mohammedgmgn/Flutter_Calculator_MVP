@@ -16,6 +16,8 @@ class Caclulator{
     result =num1*num2;
   }
   void Divsion () {
+    if(num2==0)
+      return;
     result =num1/num2;
   }
 
