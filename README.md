@@ -2,6 +2,11 @@
 
 
 Example app showing implementation of a simple calculator Using flutter with MVP architecture.
+<p align="center">
+<img src="Screenshot_2018-09-10-09-31-27.png" height="400em" />
+<img src="Screenshot_2018-09-10-09-31-46.png" height="400em" />
+</p>
+
 
 ## Getting Started
 
